@@ -1,0 +1,38 @@
+1. modules state의 그룹
+2. reducer 변화를 일으키는 함수 
+1-5. 초기값
+
+*모듈파일에 초기값 설정 / 리듀서 함수 / modules-store 연결
+*modules-store 잘 연결되었는지 확인
+
+*function App() {
+  const todoStore = useSeletor((state) => state);
+  -> 해석
+          const todoStore = useSeletor(function(state){
+            return state
+          });
+          
+const initialState = {
+  list: [
+    { id: 1, title: "입문주차", body: "props이해하기", isDone: false },
+    { id: 2, title: "숙련주차", body: "리덕스이해하기", isDone: false },
+  ],
+};
+list 키 값을 줘야한다는게 무슨뜻일까
+
+-----정리 (값 조회)
+보통 모듈은 기능의 이름따서 파일을 생성
+모듈의 구성요소를 initialState, reducer 가 있습니다.
+모듈을 만들고나면 store에 연결해야한다
+연결은 config파일에서 
+compontent에서 store 조회할때는 useSeletor를 사용
+function App() {
+  const todoStore = useSelector((state) => state);
+  여기서 state는 모든 state를 조회할 수 있는 값
+
+------(값 변경) reducer 에서 명령
+action 객체 {type: "PLUS_ONE"}
+로직코드는 swich 문
+
+
+

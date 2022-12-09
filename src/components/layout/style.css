@@ -1,0 +1,6 @@
+.layout {
+  /* layoutdiv를 화면 중앙에 배치하려는 margin값 */
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+}
